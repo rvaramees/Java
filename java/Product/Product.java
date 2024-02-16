@@ -1,26 +1,18 @@
 package Product;
-public class Product{
-    private int pcode;
-    private int price;
-    private String pname;
-    public Product(int pcode, String pname, int price){
-        this.pcode = pcode;
-        this.pname = pname;
-        this.price = price; 
+import java.util.Scanner;
+public class Product {
+    int pcode;
+    String pname;
+    double price;
+    public void readData(){
+        Scanner s = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the product code : ");
+        this.pcode = s.nextInt();
+        System.out.println("Enter the product name : ");
+        this.pname = sc.nextLine();
+        System.out.println("Enter the price of product : ");
+        this.price = s.nextDouble();
     }
-    public String getName(){
-        return pname;
-    }
-    public int getCode(){
-        return pcode;
-    }
-    public int getPrice(){
-        return price;
-    }
-    public void setName(String pname){
-        this.pname = pname;
-    }
-    public void setPrice(int price){
-        this.price = price;
-    } 
-}
+} 
+    
